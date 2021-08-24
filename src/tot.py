@@ -36,9 +36,8 @@ class TopicsOverTime:
 			documents.append(words)
 			dictionary.update(set(words))
 		for timestamp in fileinput.input(timestamps_path):
-			num_titles = int(timestamp.strip().split()[0])
-			timestamp = float(timestamp.strip().split()[1])
-			timestamps.extend([timestamp for title in range(num_titles)])
+			timestamp = float(timestamp.strip())
+			timestamps.append(timestamp)
 		for line in fileinput.input(stopwords_path):
 			stopwords.update(set(line.lower().strip().split()))
 		first_timestamp = timestamps[0]
