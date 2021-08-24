@@ -40,7 +40,7 @@ class TopicsOverTime:
 			timestamp = float(timestamp.strip().split()[1])
 			timestamps.extend([timestamp for title in range(num_titles)])
 		for line in fileinput.input(stopwords_path):
-			stopwords.update(Set(line.lower().strip().split()))
+			stopwords.update(set(line.lower().strip().split()))
 		first_timestamp = timestamps[0]
 		last_timestamp = timestamps[len(timestamps)-1]
 		timestamps = [1.0*(t-first_timestamp)/(last_timestamp-first_timestamp) for t in timestamps]

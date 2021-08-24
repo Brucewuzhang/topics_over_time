@@ -30,7 +30,7 @@ def main():
     datapath = args.datapath
     resultspath = args.resultspath
     os.makedirs(resultspath, exist_ok=True)
-    documents_path = os.path.join(datapath, 'alltarticles')
+    documents_path = os.path.join(datapath, 'allarticles')
     timestamps_path = os.path.join(datapath, 'alltimes')
     stopwords_path = os.path.join(datapath, 'allstopwords')
     tot_topic_vectors_path = os.path.join(resultspath, 'pnas_tot_topic_vectors.csv')
