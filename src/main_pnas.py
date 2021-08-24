@@ -51,4 +51,8 @@ def main():
 
 
 if __name__ == "__main__":
+    import time
+    start_t = time.time()
     main()
+    end_t = time.time()
+    print("time cost is: {:.4f}".format(end_t - start_t))
