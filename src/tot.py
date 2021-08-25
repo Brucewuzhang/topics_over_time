@@ -19,6 +19,7 @@ import random
 import scipy.special
 import math
 import numpy as np
+from copy import deepcopy
 import scipy.stats
 import pickle
 from math import log
