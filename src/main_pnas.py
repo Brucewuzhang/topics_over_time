@@ -25,6 +25,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--datapath', type=str)
     parser.add_argument('--resultspath', type=str)
+    parser.add_argument('--n_topics', type=int, required=True)
     args = parser.parse_args()
 
     datapath = args.datapath

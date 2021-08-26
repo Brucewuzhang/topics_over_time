@@ -57,11 +57,11 @@ class TopicsOverTime:
 				par['n'][topic_di][word_di] += 1
 				par['n_sum'][topic_di] += 1
 
-	def InitializeParameters(self, documents, timestamps, dictionary):
+	def InitializeParameters(self, documents, timestamps, dictionary, **kwargs):
 		par = {}						# dictionary of all parameters
 		par['dataset'] = 'pnas'			# dataset name
 		par['max_iterations'] = 100		# max number of iterations in gibbs sampling
-		par['T'] = 10					# number of topics
+		par['T'] = kwargs.get('T', 10)				# number of topics
 		par['D'] = len(documents)
 		par['V'] = len(dictionary)
 		par['N'] = [len(doc) for doc in documents]
