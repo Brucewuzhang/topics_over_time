@@ -15,7 +15,6 @@
 
 
 import fileinput
-from sets import Set
 import random
 import scipy.special
 import math
